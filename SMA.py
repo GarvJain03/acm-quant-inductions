@@ -38,9 +38,11 @@ for i in range(len(stock_data)):
         else:
             stock_data.at[stock_data.index[i], "Sell"] = True
 
+# Filter Rows
 buy_signals = stock_data[stock_data["Buy"] == True]
 sell_signals = stock_data[stock_data["Sell"] == True]
 
+# Generate Plot
 plt.figure(figsize=(14, 7))
 plt.plot(stock_data.index, stock_data["Close"], label="Close Price")
 plt.plot(stock_data.index, stock_data["SMA_5"], label="5-day SMA")
@@ -61,6 +63,6 @@ plt.scatter(
 )
 plt.title("Stock Closing Price and SMA Crossover (Last 6 Months)")
 plt.xlabel("Date")
-plt.ylabel("Price")
+plt.ylabel("Price (INR)")
 plt.legend()
 plt.show()
