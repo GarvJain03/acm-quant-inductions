@@ -43,7 +43,7 @@ for stock in portfolio:
 holding_values["Total Portfolio Value"] = holding_values.sum(axis=1)
 
 # Print latest value (Last Row)
-print(f"Most Recent Value = {holding_values['Total Portfolio Value'].iloc[-1]}")
+print(f"Most Recent Value = {holding_values['Total Portfolio Value'].iloc[-1]:.2f} INR")
 
 # Generate Plot
 plt.figure(figsize=(14, 7))
